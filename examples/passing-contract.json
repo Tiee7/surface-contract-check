@@ -1,0 +1,28 @@
+{
+  "sources": {
+    "sales": {
+      "path": "pages/sales.html",
+      "format": "html"
+    },
+    "docs": {
+      "path": "pages/docs-aligned.html",
+      "format": "html"
+    }
+  },
+  "checks": [
+    {
+      "name": "starter monthly price",
+      "rule": "equal",
+      "extract": [
+        {
+          "source": "sales",
+          "pattern": "Starter:\\s*\\$(\\d+)"
+        },
+        {
+          "source": "docs",
+          "pattern": "Starter:\\s*\\$(\\d+)"
+        }
+      ]
+    }
+  ]
+}

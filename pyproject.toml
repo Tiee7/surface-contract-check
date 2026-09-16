@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surface-contract-check"
+version = "0.1.0"
+description = "Catch conflicting prices, limits, and versions across product pages."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Tiee"}]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+]
+
+[project.scripts]
+surface-contract = "surface_contract.cli:entrypoint"
+
+[tool.setuptools.packages.find]
+where = ["src"]
